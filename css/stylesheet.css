@@ -1,0 +1,299 @@
+@import url("./css-reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input:active,
+input:hover,
+input:visited,
+input:focus {
+  outline: none;
+}
+
+:root {
+  /* ### Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --Light-cyan: hsl(179, 47%, 52%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* ### Neutral */
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+
+  --border-radius: 0.5rem;
+  --padding-col: 4rem;
+}
+
+body,
+html {
+  font-family: "Karla", sans-serif;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+a {
+  font-size: 1.4rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+img,
+a,
+span,
+*::before,
+*::after {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input[placeholder],
+[placeholder],
+*[placeholder] {
+  color: #3f3f3f !important;
+}
+
+/* --- Set Background --- */
+
+body {
+  background: var(--Light-Gray);
+}
+
+.container {
+  max-width: 85%;
+  width: 100%;
+  margin: 8rem auto;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    /* display: grid; */
+  }
+
+  .container {
+    max-width: 47.1%;
+    /* margin: auto; */
+    margin: 0 auto;
+    margin-top: 12rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+    grid-template-areas:
+      "header header"
+      "subscription feature";
+  }
+}
+
+/* --- Header Section --- */
+
+.price__header {
+  grid-area: header;
+  background: #fff;
+  padding: 3rem 2rem;
+}
+
+.header__title {
+  font-size: 1.85rem;
+  color: var(--Cyan);
+}
+
+.header__subtitle {
+  font-size: 1.4rem;
+  color: var(--Bright-Yellow);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.header__text {
+  font-size: 1.35rem;
+  color: var(--Grayish-Blue);
+}
+
+@media screen and (min-width: 1024px) {
+  .price__header {
+    grid-area: header;
+    padding: 3rem 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .header__title {
+    font-size: 2.35rem;
+    margin-top: 0.75rem;
+  }
+
+  .header__subtitle {
+    font-size: 1.75rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .header__text {
+    font-size: 1.56rem;
+    line-height: 1.6;
+  }
+}
+
+/* --- Subscription Section --- */
+
+.price__subscription {
+  background: var(--Cyan);
+  color: #fff;
+  padding: 2rem;
+}
+
+.subscription_title {
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
+
+.price__monthly {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.subscription_price {
+  font-size: 3.3rem;
+}
+
+.subscription_label {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  opacity: 0.6;
+}
+
+.subscription__text {
+  font-size: 1.65rem;
+}
+
+.subscription__button {
+  width: 100%;
+  padding: 1rem 0;
+  border: 0;
+  outline: 0;
+  background: var(--Bright-Yellow);
+  color: #fff;
+  border-radius: var(--border-radius);
+  margin-top: 2.5rem;
+  font-size: 1.6rem;
+  box-shadow: 0 0 1.5rem 0 rgba(0, 1px, 1.5rem, 0, 0.3);
+}
+
+@media screen and (min-width: 1024px) {
+  .price__subscription {
+    grid-area: subscription;
+    padding: 3rem 4rem 4rem;
+  }
+
+  .subscription_title {
+    margin-top: 0.8rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.03rem;
+  }
+
+  .price__monthly {
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  .subscription_label {
+    margin-left: 1.25rem;
+  }
+
+  .subscription__text {
+    font-size: 1.56rem;
+  }
+
+  .subscription__button {
+    margin-top: 2.75rem;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+  }
+}
+
+/* --- Feature Section --- */
+
+.price__feature {
+  grid-area: feature;
+  padding: 2rem;
+  background: var(--Light-cyan);
+  color: #fff;
+}
+
+.feature__title {
+  font-size: 1.85rem;
+  margin-bottom: 2rem;
+}
+
+.feature__list {
+  list-style-type: none;
+}
+
+.feature__item {
+  font-size: 1.35rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.feature__item + .feature__item {
+  margin-top: 0.15rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .price__feature {
+    grid-area: feature;
+    padding: 3rem 4rem 4rem;
+  }
+
+  .feature__title {
+    font-size: 1.8rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature__item {
+    font-size: 1.37rem;
+    font-weight: 400;
+  }
+
+  .feature__item + .feature__item {
+    margin-top: -0.06rem;
+  }
+}

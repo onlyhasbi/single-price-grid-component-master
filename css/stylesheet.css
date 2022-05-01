@@ -103,14 +103,12 @@ body {
 
 @media screen and (min-width: 1024px) {
   body {
-    /* display: grid; */
+    display: grid;
   }
 
   .container {
     max-width: 47.1%;
-    /* margin: auto; */
-    margin: 0 auto;
-    margin-top: 12rem;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, 50%);
     grid-template-areas:

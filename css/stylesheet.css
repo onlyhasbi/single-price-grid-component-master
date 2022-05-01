@@ -88,12 +88,13 @@ input[placeholder],
 
 body {
   background: var(--Light-Gray);
+  display: grid;
 }
 
 .container {
   max-width: 85%;
   width: 100%;
-  margin: 8rem auto;
+  margin: auto;
   border-top-right-radius: var(--border-radius);
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
@@ -108,7 +109,6 @@ body {
 
   .container {
     max-width: 47.1%;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, 50%);
     grid-template-areas:

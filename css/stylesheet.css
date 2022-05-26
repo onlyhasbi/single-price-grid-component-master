@@ -96,6 +96,7 @@ body {
   width: 100%;
   margin: 7.2rem auto;
   border-radius: 0.75rem;
+  box-shadow: 0 2rem 3rem 1px rgba(135, 147, 156, 0.2);
   overflow: hidden;
 }
 
@@ -207,8 +208,8 @@ body {
 .subscription__button {
   width: 100%;
   padding: 1.2rem 0;
-  border: 0;
-  outline: 0;
+  text-decoration: none;
+  text-align: center;
   background: var(--Bright-Yellow);
   color: #fff;
   border-radius: var(--border-radius);

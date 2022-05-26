@@ -92,23 +92,22 @@ body {
 }
 
 .container {
-  max-width: 85%;
+  max-width: 31.1rem;
   width: 100%;
-  margin: auto;
-  border-top-right-radius: var(--border-radius);
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  margin: 7.2rem auto;
+  border-radius: 0.75rem;
   overflow: hidden;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   body {
     display: grid;
   }
 
   .container {
-    max-width: 47.1%;
+    max-width: 63.6rem;
+    margin-top: 16.3rem;
+    margin-bottom: 16.3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, 50%);
     grid-template-areas:
@@ -122,31 +121,36 @@ body {
 .price__header {
   grid-area: header;
   background: #fff;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2.4rem 3.1rem;
 }
 
 .header__title {
-  font-size: 1.85rem;
+  font-size: 1.95rem;
   color: var(--Cyan);
 }
 
 .header__subtitle {
   font-size: 1.4rem;
   color: var(--Bright-Yellow);
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 2.1rem;
+  letter-spacing: 0.03rem;
+  margin-bottom: 1.4rem;
 }
 
 .header__text {
   font-size: 1.35rem;
+  line-height: 1.94;
+  letter-spacing: 0.01rem;
   color: var(--Grayish-Blue);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   .price__header {
     grid-area: header;
-    padding: 3rem 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2.9rem;
+    padding-left: 4.2rem;
+    padding-right: 4rem;
+    padding-bottom: 4.2rem;
   }
 
   .header__title {
@@ -155,13 +159,13 @@ body {
   }
 
   .header__subtitle {
-    font-size: 1.75rem;
-    margin-top: 1.6rem;
-    margin-bottom: 1.1rem;
+    font-size: 1.7rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.98rem;
   }
 
   .header__text {
-    font-size: 1.56rem;
+    font-size: 1.54rem;
     line-height: 1.6;
   }
 }
@@ -171,19 +175,18 @@ body {
 .price__subscription {
   background: var(--Cyan);
   color: #fff;
-  padding: 2rem;
+  padding: 2.16rem 2.4rem 2.4rem;
 }
 
 .subscription_title {
-  font-size: 1.6rem;
-  letter-spacing: 0.05rem;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
 .price__monthly {
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
+  margin-top: 0.8rem;
 }
 
 .subscription_price {
@@ -191,30 +194,31 @@ body {
 }
 
 .subscription_label {
-  margin-left: 1rem;
+  margin-left: 1.3rem;
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   opacity: 0.6;
 }
 
 .subscription__text {
-  font-size: 1.65rem;
+  font-size: 1.56rem;
 }
 
 .subscription__button {
   width: 100%;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   border: 0;
   outline: 0;
   background: var(--Bright-Yellow);
   color: #fff;
   border-radius: var(--border-radius);
-  margin-top: 2.5rem;
+  margin-top: 2.7rem;
+  font-weight: 700;
   font-size: 1.6rem;
   box-shadow: 0 0 1.5rem 0 rgba(0, 1px, 1.5rem, 0, 0.3);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   .price__subscription {
     grid-area: subscription;
     padding: 3rem 4rem 4rem;
@@ -250,14 +254,14 @@ body {
 
 .price__feature {
   grid-area: feature;
-  padding: 2rem;
+  padding: 2.1rem 2.4rem 2.3rem;
   background: var(--Light-cyan);
   color: #fff;
 }
 
 .feature__title {
-  font-size: 1.85rem;
-  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .feature__list {
@@ -270,11 +274,7 @@ body {
   opacity: 0.7;
 }
 
-.feature__item + .feature__item {
-  margin-top: 0.15rem;
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   .price__feature {
     grid-area: feature;
     padding: 3rem 4rem 4rem;
